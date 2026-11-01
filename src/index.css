@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Page background and text color follow the theme */
+body.dark-theme {
+  background-color: #111111;
+  color: #e5e5e5;
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* No horizontal scroll */
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Stop phones from zooming into inputs when you tap them */
+@media (max-width: 768px) {
+  input,
+  textarea {
+    font-size: 16px !important;
+  }
+}
