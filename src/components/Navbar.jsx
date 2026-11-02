@@ -1,5 +1,4 @@
 import {
-  FiBookOpen,
   FiHome,
   FiCompass,
   FiBook,
@@ -15,6 +14,7 @@ import {
   FiUserPlus,
 } from "react-icons/fi";
 import Avatar from "./Avatar";
+import Logo from "./Logo";
 
 const Navbar = ({
   activeNav,
@@ -94,10 +94,10 @@ const Navbar = ({
           <div className="flex items-center space-x-4 lg:space-x-8">
             <button
               onClick={() => onNavigate("home")}
-              className={`text-xl font-bold ${themeClass("text-white", "text-gray-900")} flex items-center`}
+              aria-label="Storlo home"
+              className={themeClass("text-white", "text-gray-900")}
             >
-              <FiBookOpen className="mr-2 w-5 h-5" />
-              Storlo
+              <Logo />
             </button>
 
             <div className="hidden md:flex space-x-6">
