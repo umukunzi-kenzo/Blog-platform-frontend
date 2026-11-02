@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import API from "../services/api";
 import { FiMail, FiLock, FiLogIn, FiUserPlus, FiArrowLeft } from 'react-icons/fi';
 
@@ -130,23 +130,24 @@ const LoginPage = () => {
 
           {/* Register Button */}
           <div>
-            <a href="/register">
-              <button className="w-full py-3 bg-[#222] text-white rounded-lg hover:bg-[#333] transition font-medium flex items-center justify-center border border-[#444]">
-                <FiUserPlus className="w-4 h-4 mr-2" />
-                Create New Account
-              </button>
-            </a>
+            <Link
+              to="/register"
+              className="w-full py-3 bg-[#222] text-white rounded-lg hover:bg-[#333] transition font-medium flex items-center justify-center border border-[#444]"
+            >
+              <FiUserPlus className="w-4 h-4 mr-2" />
+              Create New Account
+            </Link>
           </div>
 
           {/* Back to Home */}
           <div className="mt-8 text-center">
-            <a 
-              href="/" 
+            <Link
+              to="/"
               className="text-[#777] hover:text-white transition text-sm inline-flex items-center"
             >
               <FiArrowLeft className="w-3 h-3 mr-1" />
               Back to stories
-            </a>
+            </Link>
           </div>
         </div>
 

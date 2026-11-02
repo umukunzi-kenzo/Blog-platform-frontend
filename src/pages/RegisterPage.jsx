@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import API from "../services/api";
 import { FiUser, FiMail, FiLock, FiUserPlus, FiLogIn, FiArrowLeft, FiExternalLink } from 'react-icons/fi';
 
@@ -231,23 +231,23 @@ const RegisterPage = () => {
           <div className="mt-5 text-center">
             <p className="text-[#999] text-sm">
               Have an account?{" "}
-              <a 
-                href="/login" 
+              <Link 
+                to="/login" 
                 className="text-white hover:text-[#ccc] transition"
               >
                 Sign in
-              </a>
+              </Link>
             </p>
           </div>
 
           <div className="mt-3 text-center">
-            <a 
-              href="/" 
+            <Link 
+              to="/" 
               className="text-[#777] hover:text-[#999] transition text-sm inline-flex items-center"
             >
               <FiArrowLeft className="w-3 h-3 mr-1" />
               Back to stories
-            </a>
+            </Link>
           </div>
         </div>
 
